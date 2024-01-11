@@ -14,8 +14,14 @@ Allows players to purchase items in the global player shop where players have pu
 ### `/servershop`, shorthand `/ss`
 Allows players to purchase items from the global server shop, where the server admin defines items and their prices.
 
-### `/sell [amount_of_item] [price]`
+### `/sell <amount_of_item> <price>`
 Allows players to sell the current item in their hand for a price.
+
+### `/unsell <modname:itemname> [amount]`
+Returns the items in the shop of that name, to your inventory, if fits. Otherwise, just put the maximum number that will fit in your inventory.
+
+### `change_price <modname:name_of_item> <new_price_per_single>`
+Enables you to change the price of an item in your shop.
 
 ### Shop features:
 
@@ -33,7 +39,7 @@ Allows players to sell the current item in their hand for a price.
 
 - The shop inventory is infinite, so new inventory pages are added when it gets full. You have "<" and ">" arrows with the page number in between those buttons.
 
-- The shop inventory is stored globally as a detached inventory. and its metadata is kept in modstorage.
+- The shop inventory is stored globally as a detached inventory. and its global metadata is kept in modstorage.
 - Each item has added metadata to it, like "invshops_owner" and "invshops_price" (which is the price for a single one of those items).
 
 - An item from a single player stacks greater than the max stack limit. but different players with the same item sold are in different slots.
