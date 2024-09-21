@@ -1,0 +1,5 @@
+# Max number of shop slots a player can have
+inventory_shops.max_player_slots (Max player shop slots) int 8
+
+# Enable verbose action logging
+inventory_shops.verbose_logging (Verbose action logging) bool true
