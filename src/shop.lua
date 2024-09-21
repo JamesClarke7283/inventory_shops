@@ -58,7 +58,7 @@ function inventory_shops.add_item_to_shop(player_name, itemstack, price)
     local meta = itemstack:get_meta()
     meta:set_string("invshops_owner", player_name)
     meta:set_int("invshops_price", price)
-    itemstack:set_meta(meta)
+    -- No need to call itemstack:set_meta(meta)
 
     -- Add item to shop
     inv:add_item("items", itemstack)
@@ -120,7 +120,7 @@ function inventory_shops.change_item_price(player_name, item_name, new_price)
             local meta = stack:get_meta()
             if meta:get_string("invshops_owner") == player_name and stack:get_name() == item_name then
                 meta:set_int("invshops_price", new_price)
-                stack:set_meta(meta)
+                -- No need to call itemstack:set_meta(meta)
                 inv:set_stack("items", i, stack)
                 changed = true
             end
